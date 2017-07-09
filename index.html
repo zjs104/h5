@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta content="telephone=no" name="format-detection">
+		<!--网站开启对 web app 程序的支持-->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- windows phone 点击无高光 -->
+		<meta name="msapplication-tap-highlight" content="no">
+		<title>首页</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" href="css/swipe.css" />
+	</head>
+
+	<body>
+		<!--头部 开始-->
+		<div class="header">
+			<div class="container">
+				<div class="logo">
+					<img src="images/4.png" alt="" />
+				</div>
+				<a href="userCenter.html" class="user-btn">
+					<img src="images/u2.png" alt="" />
+				</a>
+			</div>
+		</div>
+		<!--头部 结束-->
+
+		<div class="index-content">
+			<!--banner 开始-->
+			<div class="banner swipe" id="mySwipe">
+				<div class="swipe-wrap">
+					<!--<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>-->
+				</div>
+				<ul id="position">
+					<!--<li class="cur"></li>
+					<li></li>
+					<li></li>-->
+				</ul>
+			</div>
+			<!--banner 结束-->
+
+			<!--维修分类 开始-->
+			<div class="maintenance-wrap">
+				<!--标题 开始-->
+				<div class="title">
+					<div class="container">
+						<i class="title-line title-line-right"></i><span class="title-content">电脑远程维修</span><i class="title-line title-line-left"></i>
+					</div>
+				</div>
+				<!--标题结束-->
+
+				<!--维修内容 开始-->
+				<div class="maintenance-types">
+					<ul class="maintenance-content">
+						<!--<li class="maintenance-item">
+							<a href="appleSystem.html">
+								<img src="images/4.png" alt="" />
+								<span>苹果系统</span>
+							</a>
+						</li>
+						<li class="maintenance-item">
+							<a href="systemReload.html">
+								<img src="images/2.png" alt="" />
+								<span>普通电脑</span>
+							</a>
+						</li>
+						<li class="maintenance-item">
+							<a href="dataRecover.html">
+								<img src="images/3.png" alt="" />
+								<span>数据恢复</span>
+							</a>
+						</li>
+						<li class="maintenance-item">
+							<a href="dualSystem.html">
+								<img src="images/1.png" alt="" />
+								<span>Mac双系统</span>
+							</a>
+						</li>
+						<li class="maintenance-item">
+							<a href="virtualMachine.html">
+								<img src="images/6.png" alt="" />
+								<span>VM虚拟机</span>
+							</a>
+						</li>
+						<li class="maintenance-item">
+							<a href="NewMachineRec.html">
+								<img src="images/5.png" alt="" />
+								<span>新机开荒</span>
+							</a>
+						</li>-->
+					</ul>
+				</div>
+				<!--维修内容 结束-->
+			</div>
+			<!--维修分类 结束-->
+			
+			<!--更多服务 开始-->
+			<div class="index-server">
+				<div class="container">
+					<a href="javascript:;" class="customer-service">
+						联系客服
+					</a>
+					<a href="javascript:;" class="more-service">
+						更多服务
+					</a>
+				</div>
+				
+			</div>
+			<!--更多服务 结束-->
+			
+			<div class="security">
+				<ul class="security-content">
+					<li class="security-item">
+						<img src="images/security2.png" alt="" />
+						<span>快速派单</span>
+					</li>
+					<li class="security-item">
+						<img src="images/security1.png" alt="" />
+						<span>专业平台</span>
+					</li>
+					<li class="security-item">
+						<img src="images/security3.png" alt="" />
+						<span>拍付保障</span>
+					</li>
+				</ul>
+			</div>
+			<div class="about">
+				<a href="#">关于我们</a>
+				<span>|</span>
+				<a href="#">联系我们</a>
+			</div>
+		</div>
+		<!--内容 结束-->
+		
+		<!--底部 开始-->
+		<div class="footer">
+			<a class="order-btn">
+				一键下单
+			</a>
+			<span class="footer-tip">电脑有问题？幸好有你在！</span>
+		</div>
+		<!--底部 结束-->
+		<script src="js/zepto.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/swipe.js"></script>
+		<script>
+			var bullets = document.getElementById("position").getElementsByTagName('li');
+			window.mySwipe = new Swipe(document.getElementById('mySwipe'), {
+				  startSlide: 0,
+				  speed: 400,
+				  auto: 3000,
+				  continuous: true,
+				  disableScroll: false,
+				  stopPropagation: false,
+				  autoplayDisableOnInteraction: false,
+				  callback: function(index, elem) {
+				  	 bullets.className="";
+			            bullets[index].className='cur';
+			            var i = bullets.length;
+			            while (i--) {
+			                bullets[i].className = ' ';
+			            }
+			            bullets[index].className = 'cur';
+				  }
+				});
+		</script>
+	</body>
+
+</html>

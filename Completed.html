@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta content="telephone=no" name="format-detection">
+		<!--网站开启对 web app 程序的支持-->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- windows phone 点击无高光 -->
+		<meta name="msapplication-tap-highlight" content="no">
+		<title>已完成</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" href="css/swipe.css" />
+	</head>
+	<body>
+		<!--头部 开始-->
+		<div class="header">
+			<div class="container">
+				<div class="logo">
+					<img src="images/4.png" alt="" />
+				</div>
+				<a href="index.html" class="home-btn">
+					<img src="images/u180.png" alt="" />
+				</a>
+			</div>
+		</div>
+		<!--头部 结束-->
+		
+		<!--内容开始-->
+		<div class="content-container">
+			<div class="userCenter-banner">
+				<img src="" alt="" />
+			</div>
+			<div class="userCenter-content">
+				<div class="userCenter-tab">
+					<div class="userCenter-tab-item userCenter-tab-on">全部订单</div>
+					<div class="userCenter-tab-item">更多设置</div>
+				</div>
+				<div class="userCenter-list">
+					<div class="userCenter-list-item">
+						<ul class="userCenter-orders">
+							<li class="userCenter-orders-item">
+								<div class="container">
+									<div class="userCenter-orders-t">
+										<div class="userCenter-orders-del">
+											<img src="images/u222.png" alt="" />
+										</div>
+										<div class="userCenter-orders-num">订单编号：<span>11111111</span></div>
+									</div>
+									<div class="userCenter-orders-c">
+										<div class="userCenter-orders-demand">
+											<p>用户需求</p>
+											<p></p>
+										</div>
+										<div class="userCenter-orders-per">
+											<div class="orders-per-img"></div>
+											<span>某师傅</span>
+										</div>
+									</div>
+									<div class="userCenter-orders-b">
+										<div class="userCenter-orders-state">订单状态：<span>已完成</span></div>
+										<div class="userCenter-orders-money">订单金额：<span class="red">&yen;30</span></div>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="bottom-tip">
+							<div class="container">
+								<i class="title-line title-line-left"></i><span class="title-content">已经到底了</span><i class="title-line title-line-right"></i>
+							</div>
+						</div>
+					</div>
+					<div class="userCenter-list-item  hide">
+						<ul class="more-set container">
+							<li class="more-set-item">
+								<a href="javascript:;">
+									<img src="images/u286.png" alt="" class="more-set-arrow"/>
+									<img src="images/u274.png" alt="" class="more-set-icon"/>
+									<span class="more-set-content">姓名</span>
+								</a>
+							</li>
+							<li class="more-set-item">
+								<a href="javascript:;">
+									<img src="images/u286.png" alt="" class="more-set-arrow"/>
+									<img src="images/u284.png" alt="" class="more-set-icon"/>
+									<span class="more-set-content">性别</span>
+								</a>
+							</li>
+							<li class="more-set-item">
+								<a href="javascript:;">
+									<img src="images/u286.png" alt="" class="more-set-arrow"/>
+									<img src="images/u282.png" alt="" class="more-set-icon"/>
+									<span class="more-set-content">联系方式</span>
+								</a>
+							</li>
+							<li class="more-set-item">
+								<a href="javascript:;">
+									<img src="images/u286.png" alt="" class="more-set-arrow"/>
+									<img src="images/u280.png" alt="" class="more-set-icon"/>
+									<span class="more-set-content">优惠券</span>
+								</a>
+							</li>
+							<li class="more-set-item">
+								<a href="javascript:;">
+									<img src="images/u286.png" alt="" class="more-set-arrow"/>
+									<img src="images/u278.png" alt="" class="more-set-icon"/>
+									<span class="more-set-content">呼叫客服</span>
+								</a>
+							</li>
+							<li class="more-set-item">
+								<a href="userAgreement.html">
+									<img src="images/u286.png" alt="" class="more-set-arrow"/>
+									<img src="images/u276.png" alt="" class="more-set-icon"/>
+									<span class="more-set-content">用户协议</span>
+								</a>
+							</li>
+						</ul>
+						<div class="bottom-tip">
+							<div class="container">
+								<i class="title-line title-line-left"></i><span class="title-content">没有更多了</span><i class="title-line title-line-right"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal del-modal hide">
+			<div class="mask"></div>
+			<div class="modal-box">
+				<div class="modal-container">
+					<div class="modal-title">确定要删除此订单吗？</div>
+				</div>
+				<div class="modal-btns">
+					<a href="javascript:;" class="modal-btn modal-confirm">确定</a>
+					<a href="javascript:;" class="modal-btn modal-cencel">取消</a>
+				</div>
+			</div>	
+		</div>
+		<!--内容结束-->
+		<script src="js/zepto.js"></script>
+		<script src="js/fastclick.js"></script>
+		<script type="text/javascript">
+			$('.userCenter-tab').on('click','.userCenter-tab-item',function(){
+				$(this).addClass('userCenter-tab-on').siblings().removeClass('userCenter-tab-on');
+				$('.userCenter-list-item').eq($(this).index()).removeClass('hide').siblings().addClass('hide');
+			});
+			$('.userCenter-orders-del').on('click',function(){
+				$('.modal').removeClass('hide');
+			});
+			$('.modal-btns').on('click','.modal-btn',function(){
+				$('.modal').addClass('hide');
+			});
+			$('.more-set').on('click','.more-set-item',function(){
+				$('.detail-modal').removeClass('hide');
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta content="telephone=no" name="format-detection">
+		<!--网站开启对 web app 程序的支持-->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- windows phone 点击无高光 -->
+		<meta name="msapplication-tap-highlight" content="no">
+		<title>submitOrder</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" href="css/swipe.css" />
+		<script src="js/jquery-2.0.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/submitOrder.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body> 
+		<!--头部 开始-->
+		<div class="header">
+			<div class="container">
+				<div class="logo">
+					<img src="images/4.png" alt="" />
+				</div>
+				<a href="userCenter.html" class="user-btn">
+					<img src="images/u2.png" alt="" />
+				</a>
+			</div>
+		</div>
+		<!--头部 结束-->
+		<div class="index-content">
+			
+	
+		<!--头部 开始-->
+		<div class="head-submitOrder">
+			<div class="container">
+				<p class="select">您已选择</p>
+				<p class="systerm"><span>系统安装：windows7</span><span class="price">￥149</span></p>
+			</div>
+		</div>
+		<!--头部 结束-->
+		
+		<!--main开始-->
+		<div class="contact-submitOrder">
+			<div class="container">
+				<div class="contacts">联系人
+					<div class="contactsBox">
+						<input type="text" name="" id="" value="" placeholder="姓名" class="contact-name" />
+						<button class="nameBtn">修改</button>
+					</div>
+				</div>
+				<div class="contactsWay">联系方式
+					<div class="contactsBox">
+						<input type="text" name="" id="" value="" placeholder="手机号码"  class="contact-contacts"/>
+						<button class="phoneBtn">修改</button>
+					</div>
+				</div>				
+			</div>
+		</div>
+		<div id="shade1">
+			<div class="nameShade"></div>
+			<div class="nameBomb">
+				<p><label for="nameBomb">姓名：</label><input type="text" name="" id="phoneBomb" value="" /></p>
+				<p><button class="cancel">取消</button><button class="confirm">确认</button></p>
+			</div>
+		</div>
+		
+		<div id="shade2">
+			<div class="phoneShade"></div>
+			<div class="phoneBomb">
+				<p><label for="phoneBomb">联系方式：</label><input type="text" name="" id="phoneBomb" class="inp1" value="" /></p>
+				<p><input type="text" name="" class="inp2" id="" value="" /><button class="veritifica"><span class="v1">发送验证码</span><span class="v2"><i style="font-style: inherit;">15</i>秒后重新获取</span></button></p>
+				<p><button class="cancel">取消</button><button class="confirm">确认</button></p>
+			</div>
+		</div>
+		
+		<!--mian结束-->
+			
+		<!--内容开始-->
+		<div class="serverWay-submitOrder">
+			<div class="container">
+				<div class="server-way">服务方式</div>				
+				<div class="remote-service"><label for="service"><span class="circle"></span></label><input type="radio" name="" id="service" value="" />远程服务</div>			
+				<div class="coupan-code"><label for="coupan-code"><span class="circle"></span></label><input type="radio" name="" id="coupan-code" value="" />优惠码<textarea id="coupan-code-txt"></textarea></div>	
+				<div class="instructions"><span class="circle"></span>其他说明&nbsp;&nbsp;></div>	
+				<!--<input type="text" name="" id="" value="" placeholder="如有特殊需求，请再次输入" class="txt"/>-->
+				<textarea name="" rows="" cols="" class="txt" placeholder="如有特殊需求，请再次输入"></textarea>
+			</div>
+		</div>
+		<!--内容结束-->
+		</div>
+		<!--底部开始-->
+		<div class="footer-phone">
+			<div class="container">
+				<span class="total">
+					金额合计<em>￥149</em>
+				</span>
+				<a href="javascript:;"class="pay">在线支付</a>
+			</div>
+		</div>
+		<!--底部结束-->
+	</body>
+
+</html>
